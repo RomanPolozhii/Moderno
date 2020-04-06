@@ -30,7 +30,7 @@ gulp.task("html", function () {
 gulp.task("sass", function () {
   return gulp
     .src("app/scss/**/*.scss")
-    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+    .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
     .pipe(rename({ suffix: ".min" }))
     .pipe(
       autoprefixer({
