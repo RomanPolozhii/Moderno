@@ -30,7 +30,7 @@ gulp.task("html", function () {
 gulp.task("sass", function () {
   return gulp
     .src("app/scss/**/*.scss")
-    .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
+    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
     .pipe(rename({ suffix: ".min" }))
     .pipe(
       autoprefixer({
@@ -67,6 +67,7 @@ gulp.task("script", function () {
     .src([
       "node_modules/magnific-popup/dist/jquery.magnific-popup.js",
       "node_modules/slick-carousel/slick/slick.js",
+      "node_modules/mixitup/dist/mixitup.js",
     ])
     .pipe(concat("libs.min.js"))
     .pipe(uglify())
