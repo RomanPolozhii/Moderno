@@ -376,6 +376,7 @@
   &__title {
     color: #ffffff;
     font-size: 30px;
+    line-height: 36px;
     margin-right: 48px;
     max-width: 260px;
     span {
@@ -419,4 +420,172 @@
   font-size: 24px;
   background-color: #f8f8f8;
   padding: 37px 10px;
+}
+
+/* Footer
+================================= */
+
+.footer {
+  background-color: $bg;
+}
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 116px 0 100px;
+}
+.footer__col {
+  max-width: 270px;
+  width: 100%;
+  &-menu {
+    max-width: 220px;
+  }
+  &-title {
+    font-family: "Raleway", sans-serif;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $green;
+      height: 3px;
+      width: 51px;
+      bottom: 0;
+      left: 3px;
+    }
+  }
+  &-text {
+    color: #b7c3c8;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+.footer__info {
+  margin-top: 18px;
+  @include f500;
+  padding-left: 30px;
+  color: #fff;
+  position: relative;
+  &::before {
+    content: "\f041";
+    font-family: "icomoon";
+    color: $green;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.footer__info-phone {
+  &::before {
+    content: "\f095";
+  }
+}
+
+.footer__col-list {
+  a {
+    margin-bottom: 15px;
+    color: #b7c3c8;
+    padding-left: 22px;
+    position: relative;
+    &::before {
+      content: "\f105";
+      font-size: 18px;
+      position: absolute;
+      left: 0;
+      color: $green;
+      font-family: "icomoon";
+    }
+  }
+}
+
+.footer__copy {
+  border-top: 1px solid #424d53;
+}
+.footer__copy-text {
+  padding: 27px 0 32px;
+  text-align: center;
+  color: #919699;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.footer__social-link {
+  margin-bottom: 33px;
+  li {
+    display: inline-block;
+    & + li {
+      margin-left: 7px;
+    }
+  }
+  a {
+    width: 28px;
+    height: 28px;
+    background-image: url(../images/icons/css_sprites.png);
+  }
+}
+
+.link-twitter {
+  background-position: -28px -0;
+}
+.link-youtube {
+  background: -0 -28px;
+}
+.link-pinterest {
+  background-position: -28px -28px;
+}
+.link-linkedin {
+  background-position: -56px -0;
+}
+
+.footer__form-title {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer__form {
+  position: relative;
+  input {
+    display: block;
+    width: 100%;
+    width: 261px;
+    height: 40px;
+    background-color: #2f3c43;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    padding-left: 13px;
+    padding-right: 50px;
+    &::placeholder {
+      color: #697378;
+    }
+  }
+  button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $green;
+    height: 40px;
+    border: none;
+    width: 43px;
+    cursor: pointer;
+    &::before{
+      content: "\f124";
+      position: absolute;
+      font-family: 'icomoon';
+      font-size: 20px;
+      color: #fff;
+      top: 11px;
+      left: 13px;
+
+    }
+  }
 }
