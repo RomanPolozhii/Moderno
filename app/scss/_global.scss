@@ -50,9 +50,14 @@ body {
 
 .title{
   color:$bg;
-  font-weight: 700;
+  @include f500;
   font-size: 36px;
   line-height: 60px;
   text-align: center;
   margin-bottom: 30px;
+}
+
+.rate-star{
+  display: inline-block;
+  margin-right: 13px;
 }
