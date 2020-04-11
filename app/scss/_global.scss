@@ -2,6 +2,26 @@ html {
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
 *,
 *::before,
 *::after {
@@ -38,7 +58,6 @@ body {
 .container-fluid {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
   padding: 0 30px;
 }
 
@@ -48,8 +67,12 @@ body {
   }
 }
 
-.title{
-  color:$bg;
+.page-content {
+  background-color: $grey;
+}
+
+.title {
+  color: $bg;
   @include f500;
   font-size: 36px;
   line-height: 60px;
@@ -57,7 +80,37 @@ body {
   margin-bottom: 30px;
 }
 
-.rate-star{
+.rate-star {
   display: inline-block;
   margin-right: 13px;
+}
+
+.breadcrumbs {
+  &__inner {
+    padding: 45px 0px 40px;
+  }
+  &__list {
+    li {
+      display: inline-block;
+      position: relative;
+      & + li {
+        padding-left: 24px;
+        &::before {
+          content: "-";
+          position: absolute;
+          left: 8px;
+          color: $green;
+        }
+      }
+      &:last-child {
+        a,
+        span {
+          color: $bg;
+        }
+      }
+    }
+    a {
+      color: #b0bec5;
+    }
+  }
 }
