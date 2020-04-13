@@ -171,6 +171,7 @@
 .circle__menu {
   position: absolute;
   top: 69px;
+  z-index: 1;
 }
 
 .user__box,
@@ -340,6 +341,11 @@
     color: white;
     font-size: 14px;
   }
+}
+
+.header__btn-menu,
+.menu__btn{
+  display: none;
 }
 
 /* Search
@@ -845,7 +851,6 @@
   input {
     display: block;
     width: 100%;
-    width: 261px;
     height: 40px;
     background-color: #2f3c43;
     color: #fff;
@@ -1268,3 +1273,7 @@ button.icon-unsorted {
     }
   }
 }
+
+/* Media-Adaptiv 
+==========================*/
+@import "media";
