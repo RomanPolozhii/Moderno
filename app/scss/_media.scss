@@ -31,6 +31,28 @@
 @media (max-width: 840px) {
   .menu__list {
     display: none;
+    background-color: $bg;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    text-align: center;
+    padding-bottom: 30px;
+    a {
+      display: block;
+      padding: 10px 0;
+      border-bottom: 1px solid #fff;
+    }
+    li {
+      display: block;
+      & + li {
+        margin-left: 0;
+      }
+      &:first-child{
+        border-top: 1px solid #fff;
+      }
+    }
   }
   .menu__btn {
     display: block;
@@ -49,6 +71,9 @@
   .notification__box,
   .message__box {
     display: none;
+  }
+  .circle__menu {
+    right: auto;
   }
 }
 
@@ -69,6 +94,11 @@
   .header {
     position: relative;
   }
+
+  .menu__list{
+    top: 70px;
+  }
+
   .header__btn-menu {
     display: block;
     width: 70px;
@@ -93,7 +123,7 @@
     left: 100%;
     right: -100%;
     z-index: 2;
-    background-color: $grey;
+    background-color:white;
     height: 70px;
     &.active {
       left: 70px;
@@ -116,6 +146,10 @@
   .circle__menu {
     top: 52px;
   }
+
+  .user__menu {
+    top: 59px;
+  }
 }
 
 @media (max-width: 495px) {
@@ -132,6 +166,29 @@
     &.active {
       left: 47px;
     }
+  }
+  .basket__box {
+    margin-left: 0;
+  }
+
+  .menu__btn{
+    left: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .basket{
+    margin-right: 10px;
+  }
+ 
+  .user {
+    margin-right: 0;
+  }
+  .header__logo {
+    margin-left: 50px;
+  }
+  .circle__menu {
+    left: -20px;
   }
 }
 
