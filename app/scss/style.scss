@@ -1755,13 +1755,15 @@ button.icon-unsorted {
 ================================= */
 
 .page-404__wrapper,
-.about__wrapper {
+.about__wrapper,
+.contact__wrapper {
   border: 1px solid #d7d7d7;
   background-color: #fff;
   margin-bottom: 150px;
 }
 .page-404__head,
-.about__head {
+.about__head,
+.contact__head {
   color: #444444;
   font-family: "Roboto", sans-serif;
   font-size: 24px;
@@ -1851,6 +1853,135 @@ button.icon-unsorted {
   }
 }
 
+/* Contacts
+================================= */
+.contact__head {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.contact__inner {
+  padding: 35px 40px 15px;
+}
+.contact__map {
+  margin-bottom: 50px;
+  iframe {
+    width: 100%;
+    height: 415px;
+  }
+}
+.contact__box {
+  display: flex;
+}
+.contact__info {
+  margin-right: 30px;
+  max-width: 330px;
+  width: 100%;
+}
+.contact__info-item {
+  margin-bottom: 30px;
+}
+.contact__info-title {
+  color: #263238;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 44px;
+    height: 4px;
+    background-color: $green;
+    left: 40px;
+    bottom: 0;
+  }
+  &::before {
+    color: $green;
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.contact__info-content {
+  max-width: 230px;
+  padding-top: 22px;
+  color: #707070;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.contact__form-title {
+  margin-bottom: 24px;
+  color: #333333;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.contact__form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__form {
+  width: 100%;
+  input {
+    color: #7a7a7a;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: #f1f4f5;
+    border: none;
+    height: 43px;
+    max-width: 350px;
+    width: 100%;
+    padding: 0 17px;
+    margin-bottom: 30px;
+    &::placeholder {
+      color: #7a7a7a;
+      font-family: "Roboto", sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+  textarea {
+    color: #7a7a7a;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: #f1f4f5;
+    border: none;
+    width: 100%;
+    display: block;
+    height: 190px;
+    padding: 13px 17px;
+    resize: none;
+    margin-bottom: 22px;
+    &::placeholder {
+      color: #7a7a7a;
+      font-family: "Roboto", sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+  button {
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase; /* Style for "Rectangle" */
+    max-width: 190px;
+    width: 100%;
+    background-color: #8bc34a;
+    border: none;
+    padding: 16px 0;
+  }
+}
 /* Media-Adaptiv 
 ==========================*/
 @import "media";
