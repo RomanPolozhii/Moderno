@@ -2549,9 +2549,7 @@ button.icon-unsorted {
 .withdrawals__content-status {
   width: 88px;
   @include f700;
-  &.withdrawals__content-pending{
 
-  }
   &.withdrawals__content-paid {
     color: $green;
 
