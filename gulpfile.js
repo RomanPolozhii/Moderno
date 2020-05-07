@@ -21,7 +21,7 @@ gulp.task("browser-sync", function () {
 /* HTML 
   ==========================*/
 gulp.task("html", function () {
-  return gulp.src("app/*.html").pipe(browserSync.reload({ stream: true }));
+  return gulp.src("app/*.html").pipe(browserSync.reload({stream: true}));
 });
 
 /* CSS 
@@ -30,8 +30,8 @@ gulp.task("html", function () {
 gulp.task("sass", function () {
   return gulp
     .src("app/scss/**/*.scss")
-    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
-    .pipe(rename({ suffix: ".min" }))
+    .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
+    .pipe(rename({suffix: ".min"}))
     .pipe(
       autoprefixer({
         overrideBrowserslist: ["last 2 versions"],
@@ -39,7 +39,7 @@ gulp.task("sass", function () {
       })
     )
     .pipe(gulp.dest("app/css"))
-    .pipe(browserSync.reload({ stream: true }));
+    .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task("style", function () {
@@ -49,12 +49,10 @@ gulp.task("style", function () {
       "node_modules/magnific-popup/dist/magnific-popup.css",
       "node_modules/slick-carousel/slick/slick.css",
       "node_modules/rateyo/src/jquery.rateyo.css",
-      'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
-      'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
-      'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
-      'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css'
-
-
+      "node_modules/ion-rangeslider/css/ion.rangeSlider.css",
+      "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css",
+      "node_modules/jquery-form-styler/dist/jquery.formstyler.css",
+      "node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css",
     ])
     .pipe(concat("libs.min.css"))
     .pipe(cssmin())
@@ -64,7 +62,7 @@ gulp.task("style", function () {
 /* JS 
   ==========================*/
 gulp.task("js", function () {
-  return gulp.src("app/js/*.js").pipe(browserSync.reload({ stream: true }));
+  return gulp.src("app/js/*.js").pipe(browserSync.reload({stream: true}));
 });
 
 /* Scripts 
@@ -76,9 +74,9 @@ gulp.task("script", function () {
       "node_modules/slick-carousel/slick/slick.js",
       "node_modules/mixitup/dist/mixitup.js",
       "node_modules/rateyo/src/jquery.rateyo.js",
-      'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
-      'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
-      'node_modules/jquery-form-styler/dist/jquery.formstyler.js'
+      "node_modules/ion-rangeslider/js/ion.rangeSlider.js",
+      "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
+      "node_modules/jquery-form-styler/dist/jquery.formstyler.js",
     ])
     .pipe(concat("libs.min.js"))
     .pipe(uglify())
@@ -93,4 +91,7 @@ gulp.task("watch", function () {
   gulp.watch("app/js/*.js", gulp.parallel("js"));
 });
 
-gulp.task("default", gulp.parallel("style", "script", "watch", "browser-sync"));
+gulp.task(
+  "default",
+  gulp.parallel("style", "sass", "script", "watch", "browser-sync")
+);
